@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaibarin | Commission Queue</title>
+
+    <link rel="stylesheet" href="style.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="supabase-client.js" defer></script>
+<script src="script.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="index.html">kaibarin</a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="queue.html" class="active" aria-current="page">Queue</a>
+            <a href="request.html">Request</a>
+        </nav>
+    </header>
+
+    <main class="queue-page">
+
+        <section class="queue-header">
+            <p class="eyebrow">✦ THE ARTIST'S DESK ✦</p>
+
+            <h1>Commission Queue<span>!</span></h1>
+
+            <p class="queue-intro">
+                Follow your commission from sketch to finished piece!
+            </p>
+
+            <div class="queue-status" id="commission-status">
+                <span class="status-indicator" aria-hidden="true"></span>
+                <span>Commissions: Open</span>
+            </div>
+        </section>
+
+        <section class="queue-container" aria-label="Commission statuses">
+
+            <section class="queue-column" data-status="in-progress">
+                <header class="queue-column-header">
+                    <h2>IN PROGRESS</h2>
+                    <span class="queue-count" data-count="in-progress">1</span>
+                </header>
+
+                <div class="queue-cards" id="in-progress-list">
+
+                    <article class="commission-card" data-commission-id="sample-001">
+                        <p class="commission-number">#001 / DEMO</p>
+                        <h3>Sample Commission</h3>
+                        <p class="commission-type">Rendered Halfbody</p>
+
+                        <div class="commission-progress">
+                            <span class="progress-label">Status</span>
+                            <span class="commission-status-tag">In Progress</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="queue-column" data-status="on-hold">
+                <header class="queue-column-header">
+                    <h2>ON HOLD</h2>
+                    <span class="queue-count" data-count="on-hold">0</span>
+                </header>
+
+                <div class="queue-cards" id="on-hold-list">
+                    <p class="queue-empty">Nothing on hold! ♡</p>
+                </div>
+            </section>
+
+            <section class="queue-column" data-status="completed">
+                <header class="queue-column-header">
+                    <h2>COMPLETED</h2>
+                    <span class="queue-count" data-count="completed">0</span>
+                </header>
+
+                <div class="queue-cards" id="completed-list">
+                    <p class="queue-empty">Art delivered! More soon ♡</p>
+                </div>
+            </section>
+
+        </section>
+
+        <footer class="queue-footer">
+            <p>✦ THANK YOU FOR SUPPORTING MY ART! ✦</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

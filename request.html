@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaibarin | Commission Request</title>
+
+    <link rel="stylesheet" href="style.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="supabase-client.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="index.html">kaibarin</a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="queue.html">Queue</a>
+            <a href="request.html" class="active"
+               aria-current="page">Request</a>
+        </nav>
+    </header>
+
+    <main class="request-page">
+
+        <header class="request-header">
+            <p class="eyebrow">✦ LET'S MAKE SOMETHING ✦</p>
+            <h1>Commission Me<span>!</span></h1>
+            <p>
+                Read the terms, tell me about your idea,
+                and I'll get back to you about availability and next steps.
+            </p>
+        </header>
+
+        <section class="request-availability" id="request-availability">
+            <span class="status-indicator" aria-hidden="true"></span>
+            <p id="availability-message">
+                Checking commission availability...
+            </p>
+        </section>
+
+        <form id="commission-request-form">
+
+            <!-- TERMS -->
+
+            <section class="request-section">
+                <h2>01 / THE FINE PRINT</h2>
+
+                <p class="section-description">
+                    Please read through my terms before requesting
+                    a commission.
+                </p>
+
+                <div class="terms-scroll" tabindex="0"
+                     aria-label="Commission terms">
+
+                    <h3>GENERAL TERMS</h3>
+                    <p>
+                       DO'S: Original characters, Fanart, Self-inserts, Furries, Stylized portraits & character illustrations, Outfit changes
+                       DONT'S: Mecha, NSFW, Hate Imagery/Discriminatory content
+                    </p>
+
+                    <h3>PAYMENT</h3>
+                    <p>
+                        Your request is not automatically accepted
+                        when submitted. Wait for confirmation and
+                        payment instructions before sending money.
+                    </p>
+
+                    <h3>REVISIONS</h3>
+                    <p>
+                        Specify how many revisions are included,
+                        which stages can be revised, and what
+                        changes may cost extra.
+                    </p>
+
+                    <h3>REFUNDS & CANCELLATIONS</h3>
+                    <p>
+                        Explain your cancellation and refund policy
+                        clearly, including how work already completed
+                        is handled.
+                    </p>
+
+                    <h3>USAGE & CREDIT</h3>
+                    <p>
+                        Explain personal and commercial usage rights,
+                        reposting permissions, and how you handle
+                        credit for your artwork.
+                    </p>
+
+                    <h3>TURNAROUND</h3>
+                    <p>
+                        Explain your estimated delivery times and
+                        how you communicate delays.
+                    </p>
+
+                    <h3>PRIVACY</h3>
+                    <p>
+                        Explain how you use and protect customer
+                        contact information and commission details.
+                    </p>
+
+                </div>
+
+                <label class="terms-agreement">
+                    <input type="checkbox" id="terms-agree"
+                           name="terms_agreed" required>
+                    <span>
+                        I have read and agree to the commission terms.
+                    </span>
+                </label>
+            </section>
+
+            <!-- CUSTOMER DETAILS -->
+
+            <section class="request-section">
+                <h2>02 / WHO ARE YOU?</h2>
+
+                <label for="client-name">Name or preferred alias *</label>
+                <input type="text" id="client-name" name="name"
+                       autocomplete="name" maxlength="100" required>
+
+                <label for="contact-method">Preferred contact method *</label>
+                <select id="contact-method" name="contact_method" required>
+                    <option value="">Choose one...</option>
+                    <option value="email">Email</option>
+                    <option value="discord">Discord</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="client-email">Email address *</label>
+                <input type="email" id="client-email" name="email"
+                       autocomplete="email" maxlength="254" required>
+
+                <label for="contact-handle">
+                    Contact handle or additional contact details
+                </label>
+                <input type="text" id="contact-handle"
+                       name="contact_handle" maxlength="150"
+                       placeholder="e.g. Discord username">
+
+                <p class="field-note">
+                    Only provide the details needed to contact you.
+                    Never send passwords or payment card details.
+                </p>
+            </section>
+
+            <!-- COMMISSION DETAILS -->
+
+            <section class="request-section">
+                <h2>03 / THE ART STUFF</h2>
+
+                <label for="commission-type">Commission type *</label>
+                <select id="commission-type" name="commission_type"
+                        required>
+                    <option value="">Choose your commission...</option>
+                    <option value="bust">Rendered Bust — $20</option>
+                    <option value="halfbody">Rendered Halfbody — $25</option>
+                    <option value="fullbody">Rendered Fullbody — $35</option>
+                    <option value="chibi">Chibi — $15</option>
+                </select>
+
+                <label class="request-option">
+                    <input type="checkbox" id="complex-background"
+                           name="complex_background">
+                    <span>Complex background (+$15)</span>
+                </label>
+
+                <label for="extra-characters">
+                    Additional characters
+                </label>
+                <select id="extra-characters" name="extra_characters">
+                    <option value="0">No extra characters</option>
+                    <option value="1">1 extra character (+50% of base)</option>
+                    <option value="2">2 extra characters (+100% of base)</option>
+                    <option value="3">3 extra characters (+150% of base)</option>
+                </select>
+
+                <label for="commission-description">
+                    Tell me about your idea *
+                </label>
+                <textarea id="commission-description"
+                          name="description" rows="6"
+                          maxlength="5000" required
+                          placeholder="Characters, poses, expressions, references, and other details..."></textarea>
+
+                <label for="reference-links">
+                    Reference links (optional)
+                </label>
+                <textarea id="reference-links" name="reference_links"
+                          rows="3" maxlength="2000"
+                          placeholder="Links to references or character sheets"></textarea>
+
+                <div class="price-preview" aria-live="polite">
+                    <span>Estimated total</span>
+                    <output id="estimated-price">Select a commission type</output>
+                    <p>
+                        Final price confirmed by the artist.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PAYMENT PREFERENCE -->
+
+            <section class="request-section">
+                <h2>04 / PAYMENT PREFERENCE</h2>
+
+                <p class="section-description">
+                    Choose how you would prefer to pay if your
+                    request is accepted.
+                </p>
+
+                <label class="request-option">
+                    <input type="radio" name="payment_method"
+                           value="paypal" required>
+                    <span>Kofi</span>
+                </label>
+
+                <label class="request-option">
+                    <input type="radio" name="payment_method"
+                           value="venmo">
+                    <span>Venmo </span>
+                </label>
+
+            
+
+                <p class="field-note">
+                    This is a payment preference, not a payment.
+                    Never enter card numbers on this form.
+                    Payment instructions will be provided after
+                    your request is reviewed.
+                </p>
+            </section>
+
+            <!-- SUBMISSION -->
+
+            <section class="request-section request-submit">
+                <h2>05 / SEND IT!</h2>
+
+                <p>
+                    Submitting a request does not guarantee a slot.
+                    I'll review your details and contact you about
+                    availability, the final price, and next steps.
+                </p>
+
+                <button type="submit" id="submit-request">
+                    SEND COMMISSION REQUEST ✦
+                </button>
+
+                <p id="request-message" role="status"
+                   aria-live="polite"></p>
+            </section>
+
+        </form>
+
+        <footer class="request-footer">
+            <p>✦ THANK YOU FOR SUPPORTING MY ART! ✦</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

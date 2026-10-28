@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaibarin | Art Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="supabase-client.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="index.html">kaibarin</a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active"
+               aria-current="page">Gallery</a>
+            <a href="queue.html">Queue</a>
+            <a href="request.html">Request</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+
+        <section class="gallery-header">
+            <p class="eyebrow">✦ THE ART DUMP ✦</p>
+
+            <h1>My Gallery<span>!</span></h1>
+
+            <p class="gallery-intro">
+                Welcome to my corner of the internet~
+            </p>
+
+            <div class="gallery-sticker">
+                HANDMADE WITH LOVE ♡
+            </div>
+        </section>
+
+        <section class="gallery-content"
+                 aria-label="Artwork gallery">
+
+            <div class="gallery-toolbar">
+                <h2>THE COLLECTION</h2>
+
+                <p class="gallery-total">
+                    <span id="gallery-count">0</span> ARTWORKS
+                </p>
+            </div>
+
+            <div class="gallery-filters"
+                 role="group"
+                 aria-label="Filter artwork by category">
+
+                <button class="gallery-filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                    ALL ART
+                </button>
+
+                <button class="gallery-filter"
+                        type="button"
+                        data-filter="illustration"
+                        aria-pressed="false">
+                    ILLUSTRATION
+                </button>
+
+                <button class="gallery-filter"
+                        type="button"
+                        data-filter="character"
+                        aria-pressed="false">
+                    CHARACTERS
+                </button>
+
+                <button class="gallery-filter"
+                        type="button"
+                        data-filter="commission"
+                        aria-pressed="false">
+                    COMMISSIONS
+                </button>
+
+                <button class="gallery-filter"
+                        type="button"
+                        data-filter="other"
+                        aria-pressed="false">
+                    OTHER STUFF
+                </button>
+
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+
+                <!--
+                    Artwork cards will go here.
+
+                    Later, JavaScript will load published artwork
+                    from your database, so you won't need to edit
+                    this HTML whenever you upload a new piece.
+                -->
+
+                <div class="gallery-empty" id="gallery-empty">
+                    <span class="empty-doodle" aria-hidden="true">♡</span>
+
+                    <h3>It's a little empty in here...</h3>
+
+                    <p>
+                        The art is coming! Check back soon for
+                        illustrations, characters, and more.
+                    </p>
+
+                    <span class="empty-decoration">
+                        ✦ UNDER CONSTRUCTION ✦
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="gallery-footer">
+            <p>✦ THANKS FOR LOOKING AT MY ART! ✦</p>
+            <a href="request.html">WANNA COMMISSION ME? →</a>
+        </footer>
+
+    </main>
+
+</body>
+</html>
+```

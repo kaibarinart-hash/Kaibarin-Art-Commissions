@@ -1,0 +1,3144 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home-link {
+  margin-left: auto;
+}
+
+
+.queue-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.queue-column {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+}
+.commission-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+/* Stack columns on smaller screens */
+@media (max-width: 650px) {
+  .queue-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================
+    PRETTY DISASTER
+   PINK CHROME • GIRLHOOD • Y2K CHAOS
+   MYSPACE ENERGY / DIARY GIRL / ALT ARTIST
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Patrick+Hand&family=Space+Mono:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* ---------- COLOR PALETTE ---------- */
+
+:root {
+    --pink: #ff42a1;
+    --pink-dark: #c92172;
+    --bubblegum: #ffb9df;
+    --pale-pink: #ffe4f1;
+
+    --silver: #c8c8d4;
+    --chrome: #f0eff7;
+    --steel: #89899c;
+    --silver-dark: #555365;
+
+    --blue: #a9dfff;
+    --blue-dark: #637dff;
+    --yellow: #f8f2a0;
+    --purple: #d0b4ff;
+    --green: #c8ffb4;
+
+    --cream: #fff6fb;
+    --paper: #ffffff;
+    --ink: #211522;
+    --night: #19131e;
+
+    --font-chaos: 'Permanent Marker', cursive;
+    --font-diary: 'Patrick Hand', cursive;
+    --font-tech: 'Space Mono', monospace;
+    --font-editorial: 'DM Serif Display', serif;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--font-tech);
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(#ff42a128 0.8px, transparent 0.9px),
+        radial-gradient(#89899c20 0.7px, transparent 0.9px);
+    background-size: 13px 13px, 23px 23px;
+}
+
+::selection {
+    color: var(--paper);
+    background: var(--pink-dark);
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================
+   NAVIGATION — GIRL'S DESKTOP
+========================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 19px 6%;
+
+    background: var(--paper);
+    border-bottom: 3px solid var(--ink);
+
+    position: relative;
+    z-index: 5;
+}
+
+.navbar::after {
+    content: "ONLINE ♡ PROBABLY OVERSHARING";
+    position: absolute;
+    right: 6%;
+    bottom: -10px;
+
+    padding: 1px 9px;
+    background: var(--silver);
+    border: 1px solid var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: 8px;
+    letter-spacing: 1px;
+
+    transform: rotate(1deg);
+}
+
+.logo {
+    color: var(--pink);
+    font-family: var(--font-chaos);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transform: rotate(-3deg);
+    text-shadow: 2px 2px 0 var(--silver),
+                 4px 4px 0 var(--ink);
+
+    transition: transform .2s ease;
+}
+
+.logo:hover {
+    color: var(--pink-dark);
+    transform: rotate(3deg) scale(1.06);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-left: auto;
+}
+
+.navbar nav a {
+    padding: 5px 9px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: .68rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    transition:
+        transform .2s,
+        background .2s,
+        box-shadow .2s;
+}
+
+.navbar nav a:nth-child(even) {
+    background: var(--bubblegum);
+    transform: rotate(2deg);
+}
+
+.navbar nav a:nth-child(odd) {
+    background: var(--chrome);
+    transform: rotate(-1deg);
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: var(--yellow);
+    box-shadow: 3px 3px 0 var(--pink);
+    transform: translateY(-3px) rotate(-2deg);
+}
+
+/* ==========================================
+   EYEBROW LABELS — LITTLE DIARY STICKERS
+========================================== */
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 4px 10px;
+
+    background: var(--chrome);
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--pink);
+
+    font-family: var(--font-tech);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transform: rotate(-2deg);
+}
+
+/* ==========================================
+   HOMEPAGE HERO — SHE'S A LITTLE UNWELL
+========================================== */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    padding: 115px 24px 120px;
+
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 20% 20%,
+            #ffb9df 0%,
+            transparent 40%),
+        radial-gradient(ellipse at 85% 80%,
+            #c8b0ff 0%,
+            transparent 35%),
+        var(--pink);
+
+    border-bottom: 4px solid var(--ink);
+    overflow: hidden;
+}
+
+/* Diagonal ticker */
+
+.hero::before {
+    content: "♡ TOO MUCH FEELING ♡ TOO MANY DOODLES ♡ ";
+
+    position: absolute;
+    top: 24px;
+    left: -4%;
+    width: 108%;
+    padding: 8px 0;
+
+    background: var(--ink);
+    color: var(--chrome);
+
+    font-family: var(--font-tech);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    transform: rotate(-2deg);
+    z-index: -1;
+}
+
+/* Handwritten chaos */
+
+
+.hero h1 {
+    position: relative;
+    max-width: 1000px;
+    margin: 38px auto;
+
+    color: var(--paper);
+    font-family: var(--font-chaos);
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: normal;
+    line-height: .95;
+    letter-spacing: -2px;
+
+    -webkit-text-stroke: .5px var(--ink);
+    text-shadow:
+        3px 3px 0 var(--ink),
+        6px 6px 0 var(--silver);
+
+    transform: rotate(-2deg);
+}
+
+.hero-text {
+    max-width: 500px;
+    margin: 35px auto;
+    padding: 18px 22px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    box-shadow: 7px 7px 0 var(--ink);
+
+    font-size: .8rem;
+    text-align: left;
+    transform: rotate(1deg);
+}
+
+/* ==========================================
+   BUTTONS — CLICK ME I'M CUTE
+========================================== */
+
+.button,
+.button-light {
+    display: inline-block;
+    padding: 12px 22px;
+
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: var(--pink);
+    color: var(--paper);
+
+    font-family: var(--font-chaos);
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    box-shadow: 5px 5px 0 var(--ink);
+    transform: rotate(-2deg);
+
+    transition:
+        transform .15s,
+        box-shadow .15s,
+        background .15s;
+}
+
+.button-light {
+    background: var(--chrome);
+    color: var(--ink);
+    box-shadow: 5px 5px 0 var(--pink-dark);
+}
+
+.button:hover,
+.button-light:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    transform: translate(3px, 3px) rotate(2deg);
+}
+
+/* ==========================================
+   FEATURED ART — THE BEDROOM WALL
+========================================== */
+
+.featured {
+    position: relative;
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2,
+.about h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 15px;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+
+    font-family: var(--font-chaos);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    line-height: 1.15;
+
+    box-shadow: 5px 5px 0 var(--pink);
+    transform: rotate(-2deg);
+}
+
+.section-heading > p:not(.eyebrow) {
+    margin-top: 20px;
+    font-family: var(--font-diary);
+    font-size: 1.3rem;
+}
+
+/* Artwork layout */
+
+.art-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 28px;
+}
+
+/* ==========================================
+   ART CARDS — EVERY PHOTO HAS A STORY
+========================================== */
+
+.art-card {
+    position: relative;
+    min-width: 0;
+    padding: 12px;
+
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+
+    text-align: left;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.art-card:nth-child(6n + 1) {
+    transform: rotate(-3deg);
+    background: var(--bubblegum);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.art-card:nth-child(6n + 2) {
+    transform: rotate(2deg) translateY(8px);
+    background: var(--chrome);
+    box-shadow: 6px 6px 0 var(--pink);
+}
+
+.art-card:nth-child(6n + 3) {
+    transform: rotate(-1deg);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--purple);
+}
+
+.art-card:nth-child(6n + 4) {
+    transform: rotate(3deg) translateY(-5px);
+    background: var(--pale-pink);
+    box-shadow: 6px 6px 0 var(--silver-dark);
+}
+
+.art-card:nth-child(6n + 5) {
+    transform: rotate(-2deg);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--pink);
+}
+
+.art-card:nth-child(6n) {
+    transform: rotate(2deg) translateY(6px);
+    background: var(--purple);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.art-card:hover {
+    z-index: 2;
+    transform: translateY(-8px) rotate(0deg) scale(1.025);
+    box-shadow: 9px 9px 0 var(--pink);
+}
+
+/* Artwork images */
+
+.art-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+
+    filter: saturate(.88);
+    transition: filter .25s;
+}
+
+.art-card:hover img {
+    filter: saturate(1.2) contrast(1.04);
+}
+
+.art-card h3 {
+    margin: 14px 0 0;
+
+    font-family: var(--font-chaos);
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.art-card p {
+    margin: 8px 0 2px;
+    font-family: var(--font-tech);
+    font-size: .7rem;
+}
+
+/* Gallery link */
+
+.text-link {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 9px 14px;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+    color: var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: 4px 4px 0 var(--pink);
+    transform: rotate(2deg);
+    transition: .2s;
+}
+
+.text-link:hover {
+    background: var(--pink);
+    color: var(--paper);
+    transform: rotate(-2deg) translateY(-3px);
+}
+
+/* ==========================================
+   ABOUT — UNSENT LETTERS & BAD DECISIONS
+========================================== */
+
+.about {
+    position: relative;
+    padding: 85px 24px;
+
+    border-top: 4px dashed var(--ink);
+    border-bottom: 4px dashed var(--ink);
+
+    background:
+        radial-gradient(circle at 90% 20%,
+            #ffffff75 0 2px,
+            transparent 3px),
+        var(--purple);
+
+    background-size: 24px 24px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about h2 {
+    background: var(--pink);
+    color: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(2deg);
+}
+
+.about > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 28px auto;
+    padding: 22px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+
+    font-family: var(--font-diary);
+    font-size: 1.35rem;
+    line-height: 1.6;
+    text-align: left;
+    transform: rotate(-1deg);
+}
+
+/* ==========================================
+   GALLERY PAGE — PINK FLASH PHOTOGRAPHY
+========================================== */
+
+.gallery-intro {
+    position: relative;
+    padding: 75px 24px 60px;
+
+    border-bottom: 4px solid var(--ink);
+    background:
+        radial-gradient(ellipse at 15% 20%,
+            #ffb9df 0%,
+            transparent 45%),
+        var(--purple);
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.gallery-intro h1 {
+    margin: 20px 0;
+
+    color: var(--paper);
+    font-family: var(--font-chaos);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: normal;
+    line-height: 1;
+
+    text-shadow:
+        3px 3px 0 var(--ink),
+        6px 6px 0 var(--silver-dark);
+
+    transform: rotate(-2deg);
+}
+
+.gallery-section {
+    padding: 70px 7% 95px;
+
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(#ff42a118 .8px, transparent 1px);
+    background-size: 12px 12px;
+}
+
+/* ==========================================
+   FOOTER — LOVE YOU BYEEE
+========================================== */
+
+footer {
+    padding: 35px 25px;
+
+    border-top: 3px dashed var(--ink);
+    background: var(--chrome);
+
+    text-align: center;
+    font-size: .75rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border: 2px solid var(--ink);
+    background: var(--pink);
+    color: var(--paper);
+
+    font-family: var(--font-tech);
+    font-size: .72rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: .2s;
+}
+
+.social-links a:nth-child(even) {
+    background: var(--paper);
+    color: var(--ink);
+    transform: rotate(2deg);
+}
+
+.social-links a:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.social-links a:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    box-shadow: 3px 3px 0 var(--pink);
+    transform: rotate(-2deg) translateY(-3px);
+}
+
+/* ==========================================
+   EXTRA DETAILS — GIRL MATH
+========================================== */
+
+.system-label {
+    color: var(--silver-dark);
+    font-family: var(--font-tech);
+    font-size: .6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.angel-note {
+    display: inline-block;
+    color: var(--pink-dark);
+    font-family: var(--font-diary);
+    font-size: 1.6rem;
+    font-weight: 400;
+    transform: rotate(-4deg);
+}
+
+.angel-caption {
+    color: var(--pink-dark);
+    font-family: var(--font-editorial);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* ==========================================
+   RESPONSIVE — MAIN CHARACTER ON MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 5%;
+    }
+
+    .navbar::after {
+        right: 4%;
+        font-size: 7px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .navbar nav a {
+        font-size: .65rem;
+        padding: 5px 7px;
+    }
+
+    .hero {
+        padding: 100px 20px 110px;
+    }
+
+    .hero::before {
+        font-size: .58rem;
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 12vw, 6rem);
+    }
+
+    .hero-text {
+        margin: 28px auto;
+        padding: 14px;
+    }
+
+    .art-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+    }
+
+    .featured,
+    .gallery-section {
+        padding: 55px 6%;
+    }
+
+    .art-card {
+        padding: 8px;
+    }
+
+    .art-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .about {
+        padding: 65px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .art-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .art-card:nth-child(n) {
+        transform: rotate(-1deg);
+    }
+
+    .art-card:nth-child(even) {
+        transform: rotate(2deg);
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-intro h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+:focus-visible {
+    outline: 3px solid var(--blue-dark);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+
+
+
+/* ==========================================
+   EXTRA DECOR PACK — STICKERBOOK GIRL
+   CHROME HEARTS • GLITTER • DIARY DOODLES
+========================================== */
+
+/* --- 1. TINY STAR CURSOR TRAIL VIBE --- */
+
+body {
+    background-attachment: fixed;
+}
+
+::selection {
+    color: white;
+    background: #ff42a1;
+}
+
+/* Sparkle decorations on section headings */
+
+.section-heading h2,
+.about h2 {
+    position: relative;
+}
+
+.section-heading h2::after {
+    content: "✧";
+    position: absolute;
+    top: -22px;
+    right: -19px;
+    color: var(--pink);
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(15deg);
+}
+
+.about h2::before {
+    content: "♡";
+    position: absolute;
+    top: -19px;
+    left: -23px;
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(-15deg);
+}
+
+/* --- 2. HERO STICKERS --- */
+
+.hero {
+    background-image:
+        radial-gradient(circle at 12% 42%,
+            #ffffffb5 0 2px, transparent 3px),
+        radial-gradient(circle at 83% 34%,
+            #ffffffa8 0 2px, transparent 3px),
+        radial-gradient(ellipse at 20% 20%,
+            #ffb9df 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 80%,
+            #c8b0ff 0%, transparent 35%),
+        linear-gradient(135deg, #ff42a1, #ff80c5 55%, #c7a2ff);
+    background-size: auto, auto, auto, auto, auto;
+}
+
+.hero h1::before {
+    content: "★";
+    position: absolute;
+    top: -22px;
+    left: 5%;
+    color: var(--yellow);
+    font-size: .3em;
+    -webkit-text-stroke: 1px var(--ink);
+    text-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-15deg);
+}
+
+.hero h1::after {
+    content: "♡";
+    position: absolute;
+    right: 3%;
+    bottom: -15px;
+    color: var(--bubblegum);
+    font-size: .38em;
+    -webkit-text-stroke: 1px var(--ink);
+    text-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(16deg);
+}
+
+/* Tiny handwritten note sticker */
+
+.hero-text {
+    position: relative;
+}
+
+.hero-text::after {
+    content: "xoxo ♡";
+    position: absolute;
+    top: -19px;
+    right: 12px;
+    padding: 2px 9px;
+    border: 1px solid var(--ink);
+    background: var(--yellow);
+    color: var(--ink);
+    font-family: var(--font-diary);
+    font-size: 1rem;
+    transform: rotate(7deg);
+}
+
+/* --- 3. SHINY STICKER LABELS --- */
+
+.eyebrow {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        white 0%,
+        var(--chrome) 35%,
+        var(--bubblegum) 70%,
+        white 100%
+    );
+}
+
+.eyebrow::before {
+    content: "✦ ";
+    color: var(--pink);
+}
+
+/* --- 4. POLAROID PHOTO CARDS --- */
+
+.art-card {
+    overflow: visible;
+}
+
+.art-card::before {
+    content: "♡";
+    position: absolute;
+    top: -15px;
+    left: 14px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 29px;
+    height: 29px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    background: var(--pink);
+    color: white;
+    font-size: 1rem;
+    transform: rotate(-13deg);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.art-card:nth-child(3n + 2)::before {
+    content: "✧";
+    background: var(--yellow);
+    color: var(--ink);
+}
+
+.art-card:nth-child(3n)::before {
+    content: "★";
+    background: var(--blue);
+    color: var(--ink);
+}
+
+/* Photo number and timestamp */
+
+.art-card img {
+    position: relative;
+}
+
+.art-card p {
+    color: var(--silver-dark);
+    letter-spacing: .2px;
+}
+
+.art-card h3::after {
+    content: " ୨ৎ";
+    color: var(--pink-dark);
+    font-family: var(--font-diary);
+    font-size: .85em;
+}
+
+/* --- 5. CUTE HOVER SPARKLES --- */
+
+.art-card:hover {
+    box-shadow: 0 0 0 3px white,
+                0 0 0 5px var(--pink),
+                9px 9px 0 var(--ink);
+}
+
+.navbar nav a {
+    position: relative;
+}
+
+.navbar nav a:hover::after {
+    content: "♥";
+    position: absolute;
+    top: -13px;
+    right: -5px;
+    color: var(--pink);
+    font-size: 13px;
+}
+
+/* --- 6. DIARY DOODLES AROUND ABOUT --- */
+
+.about::before {
+    content: "✧ DREAM GIRL ✧";
+    position: absolute;
+    top: 24px;
+    left: 3%;
+    padding: 5px 10px;
+    border: 2px solid var(--ink);
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: rotate(-8deg);
+}
+
+.about::after {
+    content: "♡ xoxo ♡";
+    position: absolute;
+    right: 4%;
+    bottom: 15px;
+    color: white;
+    font-family: var(--font-chaos);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(-8deg);
+    pointer-events: none;
+}
+
+/* --- 7. CANDY-CHROME BUTTONS --- */
+
+.button,
+.button-light,
+.text-link {
+    position: relative;
+    background-image: linear-gradient(
+        135deg,
+        transparent 35%,
+        #ffffff55 48%,
+        transparent 60%
+    );
+    background-size: 220% 100%;
+    background-position: 100% 0;
+}
+
+.button:hover,
+.button-light:hover,
+.text-link:hover {
+    background-position: 0 0;
+}
+
+/* --- 8. GALLERY SCRAPBOOK DIVIDER --- */
+
+.gallery-intro::after {
+    content: "★ CUT, CROP, KEEP ★";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    padding: 5px 15px;
+    border: 2px solid var(--ink);
+    border-bottom: 0;
+    background: var(--cream);
+    color: var(--pink-dark);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    transform: translateX(-50%) rotate(-1deg);
+}
+
+/* --- 9. FOOTER SIGN-OFF --- */
+
+footer::before {
+    content: "♡ ━━━━━━━━ ♡ ━━━━━━━━ ♡";
+    display: block;
+    margin-bottom: 15px;
+    color: var(--pink);
+    font-size: .9rem;
+    letter-spacing: 3px;
+}
+
+footer::after {
+    content: "made with glitter & questionable decisions";
+    display: block;
+    margin-top: 20px;
+    color: var(--silver-dark);
+    font-family: var(--font-diary);
+    font-size: 1.05rem;
+    transform: rotate(-1deg);
+}
+
+/* --- 10. CUTE SCROLLBAR --- */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pale-pink);
+    border-left: 2px solid var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid var(--ink);
+    background: linear-gradient(
+        var(--pink),
+        var(--purple),
+        var(--chrome)
+    );
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-dark);
+}
+
+/* --- 11. MOBILE DECOR FIXES --- */
+
+@media (max-width: 700px) {
+    .hero h1::before {
+        left: 0;
+        top: -18px;
+    }
+
+    .hero h1::after {
+        right: 0;
+        bottom: -10px;
+    }
+
+    .about::before {
+        top: 10px;
+        left: 5px;
+        font-size: .5rem;
+    }
+
+    .about::after {
+        right: 5px;
+        bottom: 4px;
+        font-size: 1rem;
+    }
+
+    .section-heading h2::after {
+        right: -10px;
+        top: -16px;
+    }
+}
+
+/* --- 12. REDUCE MOTION FOR ACCESSIBILITY --- */
+
+@media (prefers-reduced-motion: reduce) {
+    .art-card,
+    .art-card:hover,
+    .button,
+    .button-light,
+    .text-link {
+        transform: none;
+    }
+}
+
+
+
+/* ==========================================
+    PRETTY DISASTER
+   PINK CHROME • GIRLHOOD • Y2K CHAOS
+   MYSPACE ENERGY / DIARY GIRL / ALT ARTIST
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Patrick+Hand&family=Space+Mono:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* ---------- COLOR PALETTE ---------- */
+
+:root {
+    --pink: #ff42a1;
+    --pink-dark: #c92172;
+    --bubblegum: #ffb9df;
+    --pale-pink: #ffe4f1;
+
+    --silver: #c8c8d4;
+    --chrome: #f0eff7;
+    --steel: #89899c;
+    --silver-dark: #555365;
+
+    --blue: #a9dfff;
+    --blue-dark: #637dff;
+    --yellow: #f8f2a0;
+    --purple: #d0b4ff;
+    --green: #c8ffb4;
+
+    --cream: #fff6fb;
+    --paper: #ffffff;
+    --ink: #211522;
+    --night: #19131e;
+
+    --font-chaos: 'Permanent Marker', cursive;
+    --font-diary: 'Patrick Hand', cursive;
+    --font-tech: 'Space Mono', monospace;
+    --font-editorial: 'DM Serif Display', serif;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--font-tech);
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(#ff42a128 0.8px, transparent 0.9px),
+        radial-gradient(#89899c20 0.7px, transparent 0.9px);
+    background-size: 13px 13px, 23px 23px;
+}
+
+::selection {
+    color: var(--paper);
+    background: var(--pink-dark);
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================
+   NAVIGATION — GIRL'S DESKTOP
+========================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 19px 6%;
+
+    background: var(--paper);
+    border-bottom: 3px solid var(--ink);
+
+    position: relative;
+    z-index: 5;
+}
+
+.navbar::after {
+    content: "ONLINE ♡ PROBABLY OVERSHARING";
+    position: absolute;
+    right: 6%;
+    bottom: -10px;
+
+    padding: 1px 9px;
+    background: var(--silver);
+    border: 1px solid var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: 8px;
+    letter-spacing: 1px;
+
+    transform: rotate(1deg);
+}
+
+.logo {
+    color: var(--pink);
+    font-family: var(--font-chaos);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transform: rotate(-3deg);
+    text-shadow: 2px 2px 0 var(--silver),
+                 4px 4px 0 var(--ink);
+
+    transition: transform .2s ease;
+}
+
+.logo:hover {
+    color: var(--pink-dark);
+    transform: rotate(3deg) scale(1.06);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-left: auto;
+}
+
+.navbar nav a {
+    padding: 5px 9px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: .68rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    transition:
+        transform .2s,
+        background .2s,
+        box-shadow .2s;
+}
+
+.navbar nav a:nth-child(even) {
+    background: var(--bubblegum);
+    transform: rotate(2deg);
+}
+
+.navbar nav a:nth-child(odd) {
+    background: var(--chrome);
+    transform: rotate(-1deg);
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: var(--yellow);
+    box-shadow: 3px 3px 0 var(--pink);
+    transform: translateY(-3px) rotate(-2deg);
+}
+
+/* ==========================================
+   EYEBROW LABELS — LITTLE DIARY STICKERS
+========================================== */
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 4px 10px;
+
+    background: var(--chrome);
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--pink);
+
+    font-family: var(--font-tech);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transform: rotate(-2deg);
+}
+
+/* ==========================================
+   HOMEPAGE HERO — SHE'S A LITTLE UNWELL
+========================================== */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    padding: 115px 24px 120px;
+
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 20% 20%,
+            #ffb9df 0%,
+            transparent 40%),
+        radial-gradient(ellipse at 85% 80%,
+            #c8b0ff 0%,
+            transparent 35%),
+        var(--pink);
+
+    border-bottom: 4px solid var(--ink);
+    overflow: hidden;
+}
+
+/* Diagonal ticker */
+
+.hero::before {
+    content: "♡ TOO MUCH FEELING ♡ TOO MANY DOODLES ♡ ";
+
+    position: absolute;
+    top: 24px;
+    left: -4%;
+    width: 108%;
+    padding: 8px 0;
+
+    background: var(--ink);
+    color: var(--chrome);
+
+    font-family: var(--font-tech);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    transform: rotate(-2deg);
+    z-index: -1;
+}
+
+/* Handwritten chaos */
+
+.hero h1 {
+    position: relative;
+    max-width: 1000px;
+    margin: 38px auto;
+
+    color: var(--paper);
+    font-family: var(--font-chaos);
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: normal;
+    line-height: .95;
+    letter-spacing: -2px;
+
+    -webkit-text-stroke: .5px var(--ink);
+    text-shadow:
+        3px 3px 0 var(--ink),
+        6px 6px 0 var(--silver);
+
+    transform: rotate(-2deg);
+}
+
+.hero-text {
+    max-width: 500px;
+    margin: 35px auto;
+    padding: 18px 22px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    box-shadow: 7px 7px 0 var(--ink);
+
+    font-size: .8rem;
+    text-align: left;
+    transform: rotate(1deg);
+}
+
+/* ==========================================
+   BUTTONS — CLICK ME I'M CUTE
+========================================== */
+
+.button,
+.button-light {
+    display: inline-block;
+    padding: 12px 22px;
+
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: var(--pink);
+    color: var(--paper);
+
+    font-family: var(--font-chaos);
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    box-shadow: 5px 5px 0 var(--ink);
+    transform: rotate(-2deg);
+
+    transition:
+        transform .15s,
+        box-shadow .15s,
+        background .15s;
+}
+
+.button-light {
+    background: var(--chrome);
+    color: var(--ink);
+    box-shadow: 5px 5px 0 var(--pink-dark);
+}
+
+.button:hover,
+.button-light:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    transform: translate(3px, 3px) rotate(2deg);
+}
+
+/* ==========================================
+   FEATURED ART — THE BEDROOM WALL
+========================================== */
+
+.featured {
+    position: relative;
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2,
+.about h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 15px;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+
+    font-family: var(--font-chaos);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    line-height: 1.15;
+
+    box-shadow: 5px 5px 0 var(--pink);
+    transform: rotate(-2deg);
+}
+
+.section-heading > p:not(.eyebrow) {
+    margin-top: 20px;
+    font-family: var(--font-diary);
+    font-size: 1.3rem;
+}
+
+/* Artwork layout */
+
+.art-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 28px;
+}
+
+/* ==========================================
+   ART CARDS — EVERY PHOTO HAS A STORY
+========================================== */
+
+.art-card {
+    position: relative;
+    min-width: 0;
+    padding: 12px;
+
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+
+    text-align: left;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.art-card:nth-child(6n + 1) {
+    transform: rotate(-3deg);
+    background: var(--bubblegum);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.art-card:nth-child(6n + 2) {
+    transform: rotate(2deg) translateY(8px);
+    background: var(--chrome);
+    box-shadow: 6px 6px 0 var(--pink);
+}
+
+.art-card:nth-child(6n + 3) {
+    transform: rotate(-1deg);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--purple);
+}
+
+.art-card:nth-child(6n + 4) {
+    transform: rotate(3deg) translateY(-5px);
+    background: var(--pale-pink);
+    box-shadow: 6px 6px 0 var(--silver-dark);
+}
+
+.art-card:nth-child(6n + 5) {
+    transform: rotate(-2deg);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--pink);
+}
+
+.art-card:nth-child(6n) {
+    transform: rotate(2deg) translateY(6px);
+    background: var(--purple);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.art-card:hover {
+    z-index: 2;
+    transform: translateY(-8px) rotate(0deg) scale(1.025);
+    box-shadow: 9px 9px 0 var(--pink);
+}
+
+/* Artwork images */
+
+.art-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+
+    filter: saturate(.88);
+    transition: filter .25s;
+}
+
+.art-card:hover img {
+    filter: saturate(1.2) contrast(1.04);
+}
+
+.art-card h3 {
+    margin: 14px 0 0;
+
+    font-family: var(--font-chaos);
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.art-card p {
+    margin: 8px 0 2px;
+    font-family: var(--font-tech);
+    font-size: .7rem;
+}
+
+/* Gallery link */
+
+.text-link {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 9px 14px;
+
+    border: 2px solid var(--ink);
+    background: var(--chrome);
+    color: var(--ink);
+
+    font-family: var(--font-tech);
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: 4px 4px 0 var(--pink);
+    transform: rotate(2deg);
+    transition: .2s;
+}
+
+.text-link:hover {
+    background: var(--pink);
+    color: var(--paper);
+    transform: rotate(-2deg) translateY(-3px);
+}
+
+/* ==========================================
+   ABOUT — UNSENT LETTERS & BAD DECISIONS
+========================================== */
+
+.about {
+    position: relative;
+    padding: 85px 24px;
+
+    border-top: 4px dashed var(--ink);
+    border-bottom: 4px dashed var(--ink);
+
+    background:
+        radial-gradient(circle at 90% 20%,
+            #ffffff75 0 2px,
+            transparent 3px),
+        var(--purple);
+
+    background-size: 24px 24px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about h2 {
+    background: var(--pink);
+    color: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(2deg);
+}
+
+.about > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 28px auto;
+    padding: 22px;
+
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+
+    font-family: var(--font-diary);
+    font-size: 1.35rem;
+    line-height: 1.6;
+    text-align: left;
+    transform: rotate(-1deg);
+}
+
+/* ==========================================
+   GALLERY PAGE — PINK FLASH PHOTOGRAPHY
+========================================== */
+
+.gallery-intro {
+    position: relative;
+    padding: 75px 24px 60px;
+
+    border-bottom: 4px solid var(--ink);
+    background:
+        radial-gradient(ellipse at 15% 20%,
+            #ffb9df 0%,
+            transparent 45%),
+        var(--purple);
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.gallery-intro h1 {
+    margin: 20px 0;
+
+    color: var(--paper);
+    font-family: var(--font-chaos);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: normal;
+    line-height: 1;
+
+    text-shadow:
+        3px 3px 0 var(--ink),
+        6px 6px 0 var(--silver-dark);
+
+    transform: rotate(-2deg);
+}
+
+.gallery-section {
+    padding: 70px 7% 95px;
+
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(#ff42a118 .8px, transparent 1px);
+    background-size: 12px 12px;
+}
+
+/* ==========================================
+   FOOTER — LOVE YOU BYEEE
+========================================== */
+
+footer {
+    padding: 35px 25px;
+
+    border-top: 3px dashed var(--ink);
+    background: var(--chrome);
+
+    text-align: center;
+    font-size: .75rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border: 2px solid var(--ink);
+    background: var(--pink);
+    color: var(--paper);
+
+    font-family: var(--font-tech);
+    font-size: .72rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: .2s;
+}
+
+.social-links a:nth-child(even) {
+    background: var(--paper);
+    color: var(--ink);
+    transform: rotate(2deg);
+}
+
+.social-links a:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.social-links a:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    box-shadow: 3px 3px 0 var(--pink);
+    transform: rotate(-2deg) translateY(-3px);
+}
+
+/* ==========================================
+   EXTRA DETAILS — GIRL MATH
+========================================== */
+
+.system-label {
+    color: var(--silver-dark);
+    font-family: var(--font-tech);
+    font-size: .6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.angel-note {
+    display: inline-block;
+    color: var(--pink-dark);
+    font-family: var(--font-diary);
+    font-size: 1.6rem;
+    font-weight: 400;
+    transform: rotate(-4deg);
+}
+
+.angel-caption {
+    color: var(--pink-dark);
+    font-family: var(--font-editorial);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* ==========================================
+   RESPONSIVE — MAIN CHARACTER ON MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 5%;
+    }
+
+    .navbar::after {
+        right: 4%;
+        font-size: 7px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .navbar nav a {
+        font-size: .65rem;
+        padding: 5px 7px;
+    }
+
+    .hero {
+        padding: 100px 20px 110px;
+    }
+
+    .hero::before {
+        font-size: .58rem;
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 12vw, 6rem);
+    }
+
+    .hero-text {
+        margin: 28px auto;
+        padding: 14px;
+    }
+
+    .art-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+    }
+
+    .featured,
+    .gallery-section {
+        padding: 55px 6%;
+    }
+
+    .art-card {
+        padding: 8px;
+    }
+
+    .art-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .about {
+        padding: 65px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .art-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .art-card:nth-child(n) {
+        transform: rotate(-1deg);
+    }
+
+    .art-card:nth-child(even) {
+        transform: rotate(2deg);
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-intro h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+:focus-visible {
+    outline: 3px solid var(--blue-dark);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+
+css
+
+/* ==========================================
+   EXTRA DECOR PACK — STICKERBOOK GIRL
+   CHROME HEARTS • GLITTER • DIARY DOODLES
+========================================== */
+
+/* --- 1. TINY STAR CURSOR TRAIL VIBE --- */
+
+body {
+    background-attachment: fixed;
+}
+
+::selection {
+    color: white;
+    background: #ff42a1;
+}
+
+/* Sparkle decorations on section headings */
+
+.section-heading h2,
+.about h2 {
+    position: relative;
+}
+
+.section-heading h2::after {
+    content: "✧";
+    position: absolute;
+    top: -22px;
+    right: -19px;
+    color: var(--pink);
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(15deg);
+}
+
+.about h2::before {
+    content: "♡";
+    position: absolute;
+    top: -19px;
+    left: -23px;
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(-15deg);
+}
+
+/* --- 2. HERO STICKERS --- */
+
+.hero {
+    background-image:
+        radial-gradient(circle at 12% 42%,
+            #ffffffb5 0 2px, transparent 3px),
+        radial-gradient(circle at 83% 34%,
+            #ffffffa8 0 2px, transparent 3px),
+        radial-gradient(ellipse at 20% 20%,
+            #ffb9df 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 80%,
+            #c8b0ff 0%, transparent 35%),
+        linear-gradient(135deg, #ff42a1, #ff80c5 55%, #c7a2ff);
+    background-size: auto, auto, auto, auto, auto;
+}
+
+.hero h1::before {
+    content: "★";
+    position: absolute;
+    top: -22px;
+    left: 5%;
+    color: var(--yellow);
+    font-size: .3em;
+    -webkit-text-stroke: 1px var(--ink);
+    text-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-15deg);
+}
+
+.hero h1::after {
+    content: "♡";
+    position: absolute;
+    right: 3%;
+    bottom: -15px;
+    color: var(--bubblegum);
+    font-size: .38em;
+    -webkit-text-stroke: 1px var(--ink);
+    text-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(16deg);
+}
+
+/* Tiny handwritten note sticker */
+
+.hero-text {
+    position: relative;
+}
+
+.hero-text::after {
+    content: "xoxo ♡";
+    position: absolute;
+    top: -19px;
+    right: 12px;
+    padding: 2px 9px;
+    border: 1px solid var(--ink);
+    background: var(--yellow);
+    color: var(--ink);
+    font-family: var(--font-diary);
+    font-size: 1rem;
+    transform: rotate(7deg);
+}
+
+/* --- 3. SHINY STICKER LABELS --- */
+
+.eyebrow {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        white 0%,
+        var(--chrome) 35%,
+        var(--bubblegum) 70%,
+        white 100%
+    );
+}
+
+.eyebrow::before {
+    content: "✦ ";
+    color: var(--pink);
+}
+
+/* --- 4. POLAROID PHOTO CARDS --- */
+
+.art-card {
+    overflow: visible;
+}
+
+.art-card::before {
+    content: "♡";
+    position: absolute;
+    top: -15px;
+    left: 14px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 29px;
+    height: 29px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    background: var(--pink);
+    color: white;
+    font-size: 1rem;
+    transform: rotate(-13deg);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.art-card:nth-child(3n + 2)::before {
+    content: "✧";
+    background: var(--yellow);
+    color: var(--ink);
+}
+
+.art-card:nth-child(3n)::before {
+    content: "★";
+    background: var(--blue);
+    color: var(--ink);
+}
+
+/* Photo number and timestamp */
+
+.art-card img {
+    position: relative;
+}
+
+.art-card p {
+    color: var(--silver-dark);
+    letter-spacing: .2px;
+}
+
+.art-card h3::after {
+    content: " ୨ৎ";
+    color: var(--pink-dark);
+    font-family: var(--font-diary);
+    font-size: .85em;
+}
+
+/* --- 5. CUTE HOVER SPARKLES --- */
+
+.art-card:hover {
+    box-shadow: 0 0 0 3px white,
+                0 0 0 5px var(--pink),
+                9px 9px 0 var(--ink);
+}
+
+.navbar nav a {
+    position: relative;
+}
+
+.navbar nav a:hover::after {
+    content: "♥";
+    position: absolute;
+    top: -13px;
+    right: -5px;
+    color: var(--pink);
+    font-size: 13px;
+}
+
+/* --- 6. DIARY DOODLES AROUND ABOUT --- */
+
+.about::before {
+    content: "✧ DREAM GIRL ✧";
+    position: absolute;
+    top: 24px;
+    left: 3%;
+    padding: 5px 10px;
+    border: 2px solid var(--ink);
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: rotate(-8deg);
+}
+
+.about::after {
+    content: "♡ xoxo ♡";
+    position: absolute;
+    right: 4%;
+    bottom: 15px;
+    color: white;
+    font-family: var(--font-chaos);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(-8deg);
+    pointer-events: none;
+}
+
+/* --- 7. CANDY-CHROME BUTTONS --- */
+
+.button,
+.button-light,
+.text-link {
+    position: relative;
+    background-image: linear-gradient(
+        135deg,
+        transparent 35%,
+        #ffffff55 48%,
+        transparent 60%
+    );
+    background-size: 220% 100%;
+    background-position: 100% 0;
+}
+
+.button:hover,
+.button-light:hover,
+.text-link:hover {
+    background-position: 0 0;
+}
+
+/* --- 8. GALLERY SCRAPBOOK DIVIDER --- */
+
+.gallery-intro::after {
+    content: "★ CUT, CROP, KEEP ★";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    padding: 5px 15px;
+    border: 2px solid var(--ink);
+    border-bottom: 0;
+    background: var(--cream);
+    color: var(--pink-dark);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    transform: translateX(-50%) rotate(-1deg);
+}
+
+/* --- 9. FOOTER SIGN-OFF --- */
+
+footer::before {
+    content: "♡ ━━━━━━━━ ♡ ━━━━━━━━ ♡";
+    display: block;
+    margin-bottom: 15px;
+    color: var(--pink);
+    font-size: .9rem;
+    letter-spacing: 3px;
+}
+
+footer::after {
+    content: "made with glitter & questionable decisions";
+    display: block;
+    margin-top: 20px;
+    color: var(--silver-dark);
+    font-family: var(--font-diary);
+    font-size: 1.05rem;
+    transform: rotate(-1deg);
+}
+
+/* --- 10. CUTE SCROLLBAR --- */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pale-pink);
+    border-left: 2px solid var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid var(--ink);
+    background: linear-gradient(
+        var(--pink),
+        var(--purple),
+        var(--chrome)
+    );
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-dark);
+}
+
+/* --- 11. MOBILE DECOR FIXES --- */
+
+@media (max-width: 700px) {
+    .hero h1::before {
+        left: 0;
+        top: -18px;
+    }
+
+    .hero h1::after {
+        right: 0;
+        bottom: -10px;
+    }
+
+    .about::before {
+        top: 10px;
+        left: 5px;
+        font-size: .5rem;
+    }
+
+    .about::after {
+        right: 5px;
+        bottom: 4px;
+        font-size: 1rem;
+    }
+
+    .section-heading h2::after {
+        right: -10px;
+        top: -16px;
+    }
+}
+
+/* --- 12. REDUCE MOTION FOR ACCESSIBILITY --- */
+
+@media (prefers-reduced-motion: reduce) {
+    .art-card,
+    .art-card:hover,
+    .button,
+    .button-light,
+    .text-link {
+        transform: none;
+    }
+}
+
+
+
+.status-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 2px solid var(--ink);
+  background: white;
+  box-shadow: 3px 3px 0 var(--pink);
+  font-size: .62rem;
+  font-weight: bold;
+  transform: rotate(-2deg);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: #8cff91;
+  box-shadow: 0 0 7px #8cff91;
+}
+
+
+.cute-divider {
+  margin: 28px auto;
+  color: var(--pink);
+  font-size: 1.4rem;
+  letter-spacing: 8px;
+  text-align: center;
+  text-shadow: 1px 1px 0 white,
+               2px 2px 0 var(--purple);
+}
+
+
+
+
+
+
+
+/* =========================================
+   KAIBARIN — COMMISSION QUEUE
+   ========================================= */
+
+.queue-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 32px;
+}
+
+.queue-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.queue-header .eyebrow {
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    color: var(--pink-dark);
+    font-weight: bold;
+}
+
+.queue-header h1 {
+    font-family: "Permanent Marker", cursive;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    margin: 16px 0;
+    color: var(--ink);
+    text-shadow: 3px 3px 0 var(--bubblegum);
+    transform: rotate(-1deg);
+}
+
+.queue-header h1 span {
+    color: var(--pink);
+}
+
+.queue-intro {
+    max-width: 550px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+.queue-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: var(--cream);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--pink);
+    font-family: "Space Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transform: rotate(1deg);
+}
+
+.status-indicator {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 2px solid var(--ink);
+    flex-shrink: 0;
+}
+
+.queue-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+}
+
+.queue-column {
+    min-width: 0;
+    padding: 16px;
+    background: var(--paper-white);
+    border: 3px solid var(--ink);
+    border-radius: 5px;
+    box-shadow: 6px 6px 0 var(--silver);
+}
+
+.queue-column:nth-child(1) {
+    transform: rotate(-0.5deg);
+}
+
+.queue-column:nth-child(2) {
+    transform: rotate(0.6deg);
+    background: var(--pale-pink);
+}
+
+.queue-column:nth-child(3) {
+    transform: rotate(-0.3deg);
+    background: var(--cream);
+}
+
+.queue-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 3px dashed var(--ink);
+}
+
+.queue-column-header h2 {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.queue-count {
+    display: grid;
+    place-items: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 6px;
+    background: var(--pink);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.queue-cards {
+    display: grid;
+    gap: 16px;
+}
+
+.commission-card {
+    position: relative;
+    padding: 16px;
+    background: var(--cream);
+    border: 3px solid var(--ink);
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 var(--bubblegum);
+    overflow-wrap: anywhere;
+}
+
+.commission-card:nth-child(odd) {
+    transform: rotate(0.5deg);
+}
+
+.commission-card:nth-child(even) {
+    transform: rotate(-0.5deg);
+}
+
+.commission-number {
+    margin: 0 0 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--pink-dark);
+}
+
+.commission-card h3 {
+    margin: 0 0 8px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.25rem;
+}
+
+.commission-type {
+    margin: 0 0 16px;
+    font-size: 0.9rem;
+}
+
+.commission-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 2px dashed var(--silver);
+}
+
+.progress-label {
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+}
+
+.commission-status-tag {
+    padding: 5px 8px;
+    background: var(--blue);
+    border: 2px solid var(--ink);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.queue-empty {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.queue-footer {
+    margin-top: 48px;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+/* Responsive layouts */
+
+@media (max-width: 850px) {
+    .queue-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .queue-column:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .queue-page {
+        padding-top: 32px;
+    }
+
+    .queue-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .queue-column,
+    .queue-column:nth-child(n) {
+        grid-column: auto;
+        transform: none;
+    }
+
+    .queue-header h1 {
+        font-size: clamp(2.3rem, 12vw, 3.5rem);
+    }
+}
+
+
+
+
+/* =========================================
+   KAIBARIN — ART GALLERY
+   ========================================= */
+
+.gallery-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 36px;
+}
+
+.gallery-header {
+    position: relative;
+    text-align: center;
+    padding: 20px 0 42px;
+}
+
+.gallery-header .eyebrow {
+    color: var(--pink-dark);
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+.gallery-header h1 {
+    margin: 16px 0;
+    color: var(--ink);
+    font-family: "Permanent Marker", cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    text-shadow: 4px 4px 0 var(--bubblegum);
+    transform: rotate(-2deg);
+}
+
+.gallery-header h1 span {
+    color: var(--pink);
+}
+
+.gallery-intro {
+    max-width: 550px;
+    margin: 24px auto;
+    line-height: 1.8;
+}
+
+.gallery-sticker {
+    display: inline-block;
+    padding: 9px 14px;
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: bold;
+    transform: rotate(3deg);
+}
+
+.gallery-content {
+    margin-top: 16px;
+}
+
+.gallery-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--ink);
+}
+
+.gallery-toolbar h2 {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+}
+
+.gallery-total {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 22px 0;
+}
+
+.gallery-filter {
+    padding: 9px 13px;
+    background: var(--cream);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.gallery-filter:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.gallery-filter.active {
+    background: var(--pink);
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.gallery-filter:focus-visible {
+    outline: 3px dashed var(--pink-dark);
+    outline-offset: 4px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: start;
+    padding: 12px 4px 24px;
+}
+
+/* Artwork cards — ready for uploaded images */
+
+.gallery-card {
+    min-width: 0;
+    padding: 12px;
+    background: var(--paper-white);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--silver);
+    transition: transform 0.2s ease;
+}
+
+.gallery-card:nth-child(3n + 1) {
+    transform: rotate(-1.5deg);
+}
+
+.gallery-card:nth-child(3n + 2) {
+    transform: rotate(1deg);
+}
+
+.gallery-card:nth-child(3n) {
+    transform: rotate(-0.5deg);
+}
+
+.gallery-card:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.gallery-artwork {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    background: var(--pale-pink);
+    border: 2px solid var(--ink);
+}
+
+.gallery-card-info {
+    padding: 12px 2px 2px;
+}
+
+.gallery-card-info h3 {
+    margin: 0 0 6px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+}
+
+.gallery-card-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.gallery-category {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 8px;
+    background: var(--blue);
+    border: 2px solid var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+/* Empty gallery state */
+
+.gallery-empty {
+    grid-column: 1 / -1;
+    padding: 48px 20px;
+    text-align: center;
+    background: var(--cream);
+    border: 3px dashed var(--ink);
+}
+
+.empty-doodle {
+    display: block;
+    color: var(--pink);
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.gallery-empty h3 {
+    margin: 14px 0 8px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5rem;
+}
+
+.gallery-empty p {
+    max-width: 420px;
+    margin: 0 auto 18px;
+    line-height: 1.7;
+}
+
+.empty-decoration {
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--pink-dark);
+}
+
+.gallery-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 42px;
+    padding-top: 18px;
+    border-top: 3px dashed var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+}
+
+.gallery-footer a {
+    color: var(--pink-dark);
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Responsive gallery */
+
+@media (max-width: 850px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .gallery-page {
+        padding-top: 30px;
+    }
+
+    .gallery-header h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+    }
+
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .gallery-card:nth-child(n) {
+        transform: none;
+    }
+
+    .gallery-filters {
+        gap: 8px;
+    }
+
+    .gallery-filter {
+        flex: 1 1 auto;
+    }
+
+    .gallery-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+/* =========================================
+   KAIBARIN — REQUEST FORM
+   ========================================= */
+
+.request-page {
+    width: min(800px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 36px;
+}
+
+.request-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.request-header .eyebrow {
+    font-family: "Space Mono", monospace;
+    color: var(--pink-dark);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.request-header h1 {
+    margin: 16px 0;
+    font-family: "Permanent Marker", cursive;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    text-shadow: 3px 3px 0 var(--bubblegum);
+    transform: rotate(-1deg);
+}
+
+.request-header h1 span {
+    color: var(--pink);
+}
+
+.request-header > p:last-child {
+    line-height: 1.7;
+}
+
+.request-availability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 24px 0 32px;
+    padding: 14px;
+    background: var(--cream);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--pink);
+}
+
+.request-availability p {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.request-section {
+    margin: 28px 0;
+    padding: clamp(18px, 4vw, 30px);
+    background: var(--paper-white);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--silver);
+}
+
+.request-section:nth-of-type(even) {
+    background: var(--cream);
+    transform: rotate(0.3deg);
+}
+
+.request-section h2 {
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+    border-bottom: 3px dashed var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+}
+
+.section-description,
+.field-note {
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.field-note {
+    color: var(--silver-dark);
+}
+
+.terms-scroll {
+    height: 230px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 18px 0;
+    padding: 18px;
+    background: var(--cream);
+    border: 3px solid var(--ink);
+    line-height: 1.7;
+}
+
+.terms-scroll h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+}
+
+.terms-agreement,
+.request-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 16px 0;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.terms-agreement input,
+.request-option input {
+    flex-shrink: 0;
+    width: 19px;
+    height: 19px;
+    margin-top: 3px;
+    accent-color: var(--pink-dark);
+}
+
+.request-section > label:not(.request-option):not(.terms-agreement) {
+    display: block;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+.request-section input[type="text"],
+.request-section input[type="email"],
+.request-section select,
+.request-section textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    background: var(--cream);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    font: inherit;
+}
+
+.request-section textarea {
+    resize: vertical;
+}
+
+.request-section input:focus-visible,
+.request-section select:focus-visible,
+.request-section textarea:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 3px;
+}
+
+.price-preview {
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--pale-pink);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--pink);
+}
+
+.price-preview > span {
+    display: block;
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.price-preview output {
+    display: block;
+    margin-top: 8px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.8rem;
+}
+
+.price-preview p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.request-submit button {
+    width: 100%;
+    padding: 15px;
+    background: var(--pink);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.request-submit button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.request-submit button:focus-visible {
+    outline: 3px dashed var(--pink-dark);
+    outline-offset: 5px;
+}
+
+.request-footer {
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 540px) {
+    .request-page {
+        padding-top: 28px;
+    }
+
+    .request-section:nth-of-type(even) {
+        transform: none;
+    }
+
+    .terms-scroll {
+        height: 200px;
+    }
+}
